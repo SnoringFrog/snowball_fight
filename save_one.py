@@ -7,7 +7,7 @@ reload_snowball=0
 throw=1
 duck=2
 
-if snowballs==1:
+if snowballs<=1:
     if opponent_snowballs==0:
         if opponent_ducks==0:
             print throw
