@@ -1,5 +1,5 @@
 # Throws most of its snowballs immediately, but always saves one in case the opponent is watching for a lack of ammo
-# Then, ducks as long as possible before reloading unless there is a guaranteed safe reload or guaranteed kill
+# Then, ducks as long as possible (again, saving 1) before reloading unless there is a guaranteed safe reload or guaranteed kill
 import sys
 turn, snowballs, opponent_snowballs, ducks, opponent_ducks, max_snowballs = map(int, sys.argv[1:])
 
@@ -13,7 +13,7 @@ if snowballs==1:
             print throw
         else:
             print reload_snowball
-    elif ducks > 0:
+    elif ducks > 1:
         print duck
     else:
         print reload_snowball
